@@ -2,7 +2,7 @@
 """
 Created on Thu Dec 23 13:53:50 2021
 GAUSSIAN RANDOM FIELD GENERATOR USING CHOLESKY DECOMPOSITION
-@author: PMR
+@author: Pablo Merchán-Rivera
 """
 
 import chaospy as cp
@@ -67,6 +67,18 @@ def c1(x, y, corr_x, corr_y):
     return np.exp(-(np.sqrt(d)))
 
 
+
+# %% Verbose message
+
+
+def message_random_field(start_x, stop_x, step_x, x_coord, start_y, stop_y, step_y, y_coord):
+    print('Mesh for random field:')
+    print('x-coord -->  start: %.3f, stop: %.3f, step: %.3f, length:%.3f' % (start_x, stop_x, step_x, len(x_coord)))
+    print('y-coord -->  start: %.3f, stop: %.3f, step: %.3f, length:%.3f' % (start_y, stop_y, step_y, len(y_coord)))
+    print('---'*10)
+    print('x-coord array --> %s' % (x_coord))
+    print('y-coord array --> %s' % (y_coord))
+    
   
 
 
